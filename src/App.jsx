@@ -110,7 +110,7 @@ export default function App() {
               <h1 className="hero__name">Luigi Aceto</h1>
               <p className="hero__role">
                 <span>
-                  <span aria-hidden="true">📚</span> Edge AI, computer vision and ML engineering
+                  <span aria-hidden="true">💻</span> Edge AI, computer vision and ML engineering
                 </span>
                 <span>
                   <span aria-hidden="true">📍</span> Turin, Italy
