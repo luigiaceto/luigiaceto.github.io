@@ -100,6 +100,39 @@ a:hover {
   display: block;
 }
 
+.hero__links {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.hero__links a {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--paper) 75%, transparent);
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.hero__links a:hover {
+  background: var(--blue);
+  color: var(--paper);
+}
+
+.hero__links svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+main {
+  padding-bottom: clamp(80px, 10vw, 140px);
+}
+
 .hero__portrait {
   display: block;
   align-self: end;
@@ -228,14 +261,10 @@ a:hover {
   color: var(--slate);
 }
 
-.paper__links,
-.contact__else {
+.paper__links {
   display: flex;
   flex-wrap: wrap;
   gap: 8px 28px;
-}
-
-.paper__links {
   font: 600 17px/1.4 var(--display);
 }
 
@@ -306,48 +335,6 @@ a:hover {
   font-variation-settings: 'wdth' 90;
 }
 
-/* Contact */
-.contact {
-  position: relative;
-  margin-top: clamp(80px, 12vw, 160px);
-  min-height: min(64vh, 620px);
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-}
-
-.contact__grid.dot-grid {
-  position: absolute;
-  inset: 0;
-}
-
-.contact__inner {
-  position: relative;
-  display: grid;
-  gap: 24px;
-  padding: 0 var(--gutter) 40px;
-  width: 100%;
-}
-
-.contact .block__title {
-  position: static;
-}
-
-.contact__mail {
-  justify-self: start;
-  font: 500 clamp(40px, 9vw, 136px) / 1 var(--display);
-  font-variation-settings: 'wdth' 25, 'opsz' 144;
-  overflow-wrap: anywhere;
-  text-decoration-thickness: 3px;
-  text-underline-offset: 0.12em;
-  background: var(--paper);
-}
-
-.contact__else {
-  display: block;
-  max-width: 40em;
-}
-
 /* Narrow screens */
 @media (max-width: 820px) {
   body {
@@ -368,9 +355,6 @@ a:hover {
   }
 
 
-  .contact__mail {
-    font-size: 17vw;
-  }
 
   .hero__stage {
     --name-size: 46vw;
